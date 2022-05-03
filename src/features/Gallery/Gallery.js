@@ -4,7 +4,7 @@ import PageDesc from '../../components/PageDesc/PageDesc'
 function Gallery() {
     return (
         <>
-            <PageDesc />
+            <PageDesc title="Gallery Page"/>
             <div>Gallery</div>
         </>
     )

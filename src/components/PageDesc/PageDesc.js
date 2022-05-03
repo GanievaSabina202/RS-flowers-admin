@@ -1,16 +1,13 @@
 import React from 'react';
-import Drawers from '../Drawers/Drawers';
-
 import {
     Wrapper,
     Title
 } from './PageDesc.styled'
 
-function PageDesc() {
+function PageDesc({ title }) {
     return (
         <Wrapper>
-            <Title>Gallery Page</Title>
-            <Drawers/>
+            <Title>{title}</Title>
         </Wrapper>
     )
 }

@@ -4,7 +4,7 @@ import PageDesc from '../../components/PageDesc/PageDesc'
 function OurTeam() {
     return (
         <>
-            <PageDesc />
+            <PageDesc title="Our Team Page"/>
             <div>OurTeam</div>
         </>
     )

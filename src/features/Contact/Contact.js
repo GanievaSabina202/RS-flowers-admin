@@ -4,7 +4,7 @@ import PageDesc from '../../components/PageDesc/PageDesc'
 function Contact() {
     return (
         <>
-            <PageDesc />
+            <PageDesc title="Contact Page"/>
             <div>Contact</div>
         </>
     )

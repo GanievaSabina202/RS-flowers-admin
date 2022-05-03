@@ -17,10 +17,6 @@ export const AppProvider = ({ children }) => {
                         <Grid
                             lg={2}
                             md={2}
-                            container
-                            direction="row"
-                            justifyContent="center"
-                            alignItems="center"
                         >
                             <Sidebar />
                         </Grid>

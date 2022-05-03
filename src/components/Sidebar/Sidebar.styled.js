@@ -8,6 +8,7 @@ width: 100%;
 border-radius: 15px;
 padding: 40px 0px 0px 0px;
 height: 300px;
+margin: 15px 0px 0px 0px;
 `
 export const Li = styled.li`
 list-style: none;

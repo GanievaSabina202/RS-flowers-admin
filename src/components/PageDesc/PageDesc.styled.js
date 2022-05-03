@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-background-color: red;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: space-between;
+padding: 10px;
+font-size: 25px;
+color: ${({theme})=>theme.colors.purple};
 `;
-export const Title = styled.h5``;
+export const Title = styled.h5`
+margin: 0;
+`;
