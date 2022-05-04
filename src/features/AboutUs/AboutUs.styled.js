@@ -31,3 +31,10 @@ letter-spacing: 0.7px;
 line-height: 25px;
 font-weight: 500;
 `
+
+export const Title = styled.h2`
+margin: 0;
+padding: 20px 0px 0px 0px;
+font-size: 35px;
+font-weight: 500;
+`
