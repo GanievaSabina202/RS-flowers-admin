@@ -13,12 +13,11 @@ function App() {
     <Auth0ProviderWithHistory>
       <AppProvider>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/ourTeam" element={<OurTeam />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
         </Routes>
       </AppProvider>
     </Auth0ProviderWithHistory>
