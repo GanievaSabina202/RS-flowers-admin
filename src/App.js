@@ -6,7 +6,6 @@ import Gallery from "./pages/Gallery";
 import OurTeam from "./pages/OurTeam";
 import Contact from "./pages/Contact";
 import Auth0ProviderWithHistory from "./context/Auth0Provider";
-import Login from "./pages/Login/Login";
 
 function App() {
   return (

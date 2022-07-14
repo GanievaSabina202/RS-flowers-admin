@@ -18,7 +18,7 @@ export const AppProvider = ({ children }) => {
         {!user && <Login />}
         {user && (
           <Container maxWidth="xl">
-            <Grid container spacing={1}>
+            <Grid container spacing={2}>
               <Grid lg={2} md={2}>
                 <Sidebar />
               </Grid>
