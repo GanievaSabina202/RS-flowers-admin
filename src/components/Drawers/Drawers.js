@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Drawer, Button, Group } from "@mantine/core";
 import { storage, db } from "../../config/firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 
 import {
   CustomForm,
@@ -34,7 +34,7 @@ function Drawers({drawersName}) {
     setIsSubmit(true);
     await addDoc(collection(db, `${drawersName}`), {
       ...data,
-      timestamp: serverTimestamp(),
+      // timestamp: serverTimestamp(),
     });
   };
 
