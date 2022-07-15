@@ -1,15 +1,29 @@
 import React from "react";
-import DeleteIcon from "@mui/icons-material/Delete";
-import { Wrapper, Img, Info, Title, Desc, Content } from "./Card.styled";
+import { doc, deleteDoc } from "firebase/firestore";
+import { db } from "../../config/firebase";
 
-const Card = ({item}) => {
+import {
+  Wrapper,
+  Img,
+  Info,
+  Title,
+  Desc,
+  Content,
+  DeleteIconCustom,
+} from "./Card.styled";
+
+const Card = ({ item, fbName }) => {
+  const deleteHandler = () => {
+    deleteDoc(doc(db, `${fbName}`, `${item.id}`));
+  };
+
   return (
     <Wrapper key={item.id}>
-      <Img src={item.img}/>
+      <Img src={item.img} />
       <Info>
         <Content>
           <Desc>{item.name}</Desc>
-          <DeleteIcon />
+          <DeleteIconCustom onClick={deleteHandler} />
         </Content>
         <Title>{item.desc}</Title>
       </Info>

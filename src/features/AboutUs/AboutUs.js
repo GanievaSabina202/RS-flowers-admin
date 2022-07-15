@@ -8,6 +8,7 @@ import { db } from "../../config/firebase";
 import { collection, onSnapshot } from "firebase/firestore";
 
 function AboutUs() {
+  
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -43,7 +44,7 @@ function AboutUs() {
         {users &&
           users.map((item) => (
             <Grid key={item.id} lg={12} md={12} sm={12}>
-              <Card item={item} />
+              <Card item={item} fbName="aboutUs" />
             </Grid>
           ))}
       </Grid>

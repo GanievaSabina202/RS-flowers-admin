@@ -47,7 +47,7 @@ function Drawers({drawersName}) {
         "state_change",
         (snapshot) => {
           const progress =
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 200;
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           setProgress(progress);
         },
         (error) => {

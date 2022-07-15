@@ -35,14 +35,14 @@ function OurTeam() {
     <>
       <Test>
         <PageDesc title="Our Team Page" />
-        <Drawers drawersName="ourteam"/>
+        <Drawers drawersName="ourteam" />
       </Test>
 
       <Grid container>
         {users &&
           users.map((item) => (
             <Grid key={item.id} lg={3} md={4} sm={6}>
-              <Card item={item} />
+              <Card item={item} fbName='ourteam'/>
             </Grid>
           ))}
       </Grid>

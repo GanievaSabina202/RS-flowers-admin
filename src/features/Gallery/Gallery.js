@@ -3,13 +3,14 @@ import PageDesc from "../../components/PageDesc/PageDesc";
 import Drawers from "../../components/Drawers/Drawers";
 import { Grid } from "@mui/material";
 import { db } from "../../config/firebase";
-import { collection, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot, doc, deleteDoc } from "firebase/firestore";
 import { Test } from "./Gallery.styled";
 import Card from "../../components/Card/Card";
 
 function Gallery() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     setLoading(true);
     const unsub = onSnapshot(
@@ -22,10 +23,12 @@ function Gallery() {
         setUsers(list);
         setLoading(false);
       },
+
       (error) => {
         console.log(error);
       }
     );
+     
     return () => {
       unsub();
     };
@@ -34,14 +37,14 @@ function Gallery() {
     <>
       <Test>
         <PageDesc title="Gallery Page" />
-        <Drawers drawersName="gallery"/>
+        <Drawers drawersName="gallery" />
       </Test>
 
       <Grid container>
         {users &&
           users.map((item) => (
             <Grid key={item.id} lg={3} md={4} sm={6}>
-              <Card item={item} />
+              <Card item={item} fbName='gallery'/>
             </Grid>
           ))}
       </Grid>

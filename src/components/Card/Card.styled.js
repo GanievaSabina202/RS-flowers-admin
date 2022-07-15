@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -41,14 +42,21 @@ export const Test = styled.div`
   padding-right: 20px;
 `;
 export const Info = styled.div`
-width: 100%;
-padding-top: 14px;
+  width: 100%;
+  padding-top: 14px;
 `;
 
 export const Content = styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
-width: 100%;
-color: ${({ theme }) => theme.colors.purple1};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: ${({ theme }) => theme.colors.purple1};
+`;
+
+export const DeleteIconCustom = styled(DeleteIcon)`
+  cursor: pointer;
+  &:hover{
+    color: ${({ theme }) => theme.colors.purple2};
+  }
 `;
