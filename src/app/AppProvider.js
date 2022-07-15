@@ -15,8 +15,8 @@ export const AppProvider = ({ children }) => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        {/* {!user && <Login />}
-        {user && ( */}
+        {!user && <Login />}
+        {user && (
           <Container maxWidth="xl">
             <Grid container spacing={2}>
               <Grid lg={2} md={2}>
@@ -27,7 +27,7 @@ export const AppProvider = ({ children }) => {
               </Grid>
             </Grid>
           </Container>
-        {/* )} */}
+        )}
       </ThemeProvider>
     </BrowserRouter>
   );
