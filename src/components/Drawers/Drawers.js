@@ -16,10 +16,12 @@ const initialState = {
   name: "",
   desc: "",
 };
-function Drawers({drawersName}) {
+
+function Drawers({ drawersName }) {
   const [opened, setOpened] = useState(false);
 
   const [data, setData] = useState(initialState);
+
   const { name, desc } = data;
   const [file, setFile] = useState(null);
   const [progress, setProgress] = useState(null);
@@ -36,6 +38,8 @@ function Drawers({drawersName}) {
       ...data,
       // timestamp: serverTimestamp(),
     });
+
+    setData(initialState);
   };
 
   useEffect(() => {
@@ -68,7 +72,7 @@ function Drawers({drawersName}) {
       <Drawer
         opened={opened}
         onClose={() => setOpened(false)}
-        title="Add About Us Page"
+        title={`Add ${drawersName}`}
         padding="xl"
         size="xl"
         position="right"
@@ -81,6 +85,7 @@ function Drawers({drawersName}) {
             value={name}
             name="name"
             onChange={handlerChange}
+            required
           />
           <CustomTextareaInput
             placeholder="Your comment"
@@ -88,6 +93,7 @@ function Drawers({drawersName}) {
             value={desc}
             name="desc"
             onChange={handlerChange}
+            required
           />
 
           <CustomFileInput
@@ -95,6 +101,7 @@ function Drawers({drawersName}) {
             radius="xs"
             size="md"
             onChange={(e) => setFile(e.target.files[0])}
+            required
           />
 
           <CustomButton disabled={progress !== null && progress < 100}>
