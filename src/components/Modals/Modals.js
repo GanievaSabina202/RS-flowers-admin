@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
+import { Grid, Box, Button, Modal, Typography } from "@mui/material";
 import { DeleteIconCustom } from "../Card/Card.styled";
 
 const style = {
@@ -10,10 +7,10 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 350,
   bgcolor: "background.paper",
-  border: "2px solid #000",
   boxShadow: 24,
+  borderRadius:1,
   p: 4,
 };
 
@@ -38,9 +35,22 @@ export default function Modals({ deleteHandler }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <h5>Bax Silirəm ha ?!</h5>
-          <Button onClick={DeleteItem}>OK</Button>
-          <Button onClick={handleClose}>NO</Button>
+          <Typography variant="h5" component="h5" align="center"  mb={2}>
+            Əminsiniz mi?
+          </Typography>
+          <Grid
+            container
+            direction="row"
+            justifyContent="space-evenly"
+            alignItems="center"
+          >
+            <Button onClick={DeleteItem} variant="contained" color="success">
+              BƏlİ
+            </Button>
+            <Button onClick={handleClose} variant="contained" color="error">
+              XEYR
+            </Button>
+          </Grid>
         </Box>
       </Modal>
     </div>
